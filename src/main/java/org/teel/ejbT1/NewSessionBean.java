@@ -4,6 +4,8 @@
  */
 package org.teel.ejbT1;
 
+import java.util.List;
+
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -33,6 +35,10 @@ public class NewSessionBean implements NewsessionBeanRemote {
 	@MyTest(TestType.SIMPLE)
 	AbstractMyTest s1;
 	
+	@Inject
+	@MyTest(TestType.BOTH)
+	List<AbstractMyTest> both;
+	
     /* (non-Javadoc)
 	 * @see org.teel.ejbT1.NewsessionBeanRemote#businessMethod()
 	 */
@@ -48,6 +54,8 @@ public class NewSessionBean implements NewsessionBeanRemote {
     	s1.validate();
     	
     	Singsing.doit();
+    	
+    	System.out.println(both);
     }
 
     // Add business logic below. (Right-click in editor and choose
