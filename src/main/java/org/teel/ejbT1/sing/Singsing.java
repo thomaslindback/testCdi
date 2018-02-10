@@ -1,6 +1,5 @@
 package org.teel.ejbT1.sing;
 
-import javax.enterprise.inject.spi.CDI;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
